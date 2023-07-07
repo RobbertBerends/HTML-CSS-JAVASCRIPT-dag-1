@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Comment */
+        Hieronder staat CSS in de vorm van Tag selector
+        /* Tag selector */
+        h1{
+            color:red;
+            font-size: 25px}
+        
+        span {
+            color: rgb(0, 255, 42);
+            font-size: 30px
+        }
+
+        .border1 {
+            border: 5px solid green;
+        }
+        
+        #mijn-eerste-div {
+            text-align: center;
+        }
+    </style>
+
+<!--HTML Comment-->
+
+<script>
+	// Dit is Javascript comment
+	let a;
+    a = 3
+
+    let b;
+    b = 7;
+
+    let c;
+    c = 13
+
+    let d;
+    d = 33
+
+    let e = a - b;
+
+    console.log(e)
+
+    function subtract(getal1, getal2) {console.log(getal1 - getal2)}
+
+    subtract(c,a)
+
+    function plus(getal1, getal2) {console.log(getal1+getal2)}
+
+    plus(c,a)
+
+    function delen(getal1, getal2) {console.log(getal1/getal2)}
+
+    delen(d,a)
+</script>
+
+</head>
+<body>
+    <h1>Mijn eerste applicatie</h1>
+    <h2>Mijn eerst h2</h2>
+
+    <span style="color: red; background-color: rgb(38, 0, 255); border: 5px solid red; border-radius: 25px">Dit is een span met inline styling</span> 
+    <span>Dit is een 2de span</span>
+
+    <p class="border1"> Dit is een paragraaf</p>
+
+<img class="border1" src="bmw.jpeg">
+  
+<a href="second.html">
+    Klik hierop voor de second pagina
+</a>
+
+<ul>
+    <li> Ongeorderde lijst</li>
+    <li> Tekst 2</li>
+</ul>
+
+<ol>
+    <li> Numerieke lijst</li>
+    <li> Tekst 2</li>
+</ol>
+
+
+<div id="mijn-eerste-div">
+    <span> Hallo dit staat in een div</span>
+</div>
+
+<div>
+    <ol>
+        <li>optie 1</li>
+        <li>optie 2</li>
+    </ol>
+</div>
+
+    <input type="text" id="getal1">
+    <input type="text" id="getal2">
+
+    <button type="button" onclick="telop()">
+        Optellen
+    </button>
+
+    <script>
+        function telop() {
+            // Input willen uitlezen
+           let getal1Veld = parseInt(document.getElementById('getal1').value)
+
+           // Lees 2e veld uit
+           let getal2Veld = parseInt(document.getElementById('getal2').value)
+         
+           console.log(getal1Veld+getal2Veld)
+        }
+    </script>
+
+    <button type="button" onclick="subtract()">
+    subtract</button>
+
+    <script>
+        function subtract() {
+            let getal1Veld = parseInt(document.getElementById('getal1').value)
+            let getal2Veld = parseInt(document.getElementById('getal2').value)
+
+            console.log(getal1Veld-getal2Veld)
+        }
+    </script>
+
+    <button type="button" onclick="delen()">
+        delen
+    </button>
+
+    <script>
+        function delen() {
+            let getal1Veld = parseInt(document.getElementById('getal1').value)
+            let getal2Veld = parseInt(document.getElementById('getal2').value)
+
+            console.log(getal1Veld/getal2Veld)
+        }
+    </script>
+</body>
+</html>
